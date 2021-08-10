@@ -1,15 +1,30 @@
 import React from "react"
-import useFetch from "./useFetch"
+import Home from './Home'
+import About from './About'
+import NavBar from './NavBar'
+import NotFound from "./404"
+import { BrowserRouter as ReactRouter, Switch, Route } from "react-router-dom"
 
 const App = () => {
-  const [appData, isDataLoding] = useFetch();
   
   return(
     <React.Fragment>
-      <h2> Ten-Tick -- Purchasing Tennis Tickets Online </h2>
-      
-      { isDataLoding && <div> Loading Data for you </div> }
-      { appData && <div> { appData.hello } </div> }
+      <ReactRouter>
+        <NavBar />
+
+        <Switch>
+          <Route exact path = "/">
+            <Home />
+          </Route>
+          <Route exact path = '/about'>
+            <About />
+          </Route>
+          <Route exact path = "/*">
+            <NotFound />
+          </Route>
+        </Switch>
+        
+      </ReactRouter>
     </React.Fragment>
   );
 }
