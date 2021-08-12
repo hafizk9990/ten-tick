@@ -21,10 +21,13 @@ const Home = () => {
         {
           appData.map( (eachMatch, index) => {
             return(
-              <Card 
-                key = { index }
-                match = { eachMatch }
-              />
+              <div className = "all-cards">
+                <Card 
+                  key = { index }
+                  match = { eachMatch }
+                  index = { index }
+                />
+              </div>
             );
           })
         }
