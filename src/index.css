@@ -5,7 +5,7 @@
 }
 
 .navbar {
-    background-color: #f5f5f5;
+    background-color: #f0f0f0;
     height: 110px;
     padding-left: 10%;
     padding-right: 15%;
@@ -56,23 +56,26 @@
 }
 
 .all-cards {
-    margin-right: 9%;
-    margin-left: 9%;
+    width:100%;
+    display: flex;
+    justify-content: center;
+    background-color: #f8f8f8;
 }
 
 .single-card {
-    border: 1px solid lightgray;
+    border: 1px solid transparent;
     border-radius: 15px;
-    margin: 5%;
     padding: 18px;
     width: 500px;
-    float: left;
     transition: all 0.4s cubic-bezier(0.175, 0.889, 0, 1);
-    box-shadow: 0px 13px 10px -7px rgba(0, 0, 0, 0.1);
+    box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.1);
+    margin-top: 40px;
+    margin-bottom: 40px;
+    background-color: white;
 }
 
 .single-card:hover {
-    transform: scale(1.08, 1.08);
+    transform: scale(1.15, 1.15);
 }
 
 .stats {
@@ -127,7 +130,7 @@
     background-color: white;
     color: #f1356d;
 }
-
+/* 
 @media (max-width: 720px) {
     .single-card {
         float: none;
@@ -140,4 +143,4 @@
         margin-top: 7%;
         margin-bottom: 7%;
     }
-}
+} */
