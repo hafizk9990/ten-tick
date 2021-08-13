@@ -60,6 +60,8 @@
     display: flex;
     justify-content: center;
     background-color: #f8f8f8;
+    padding-top: 40px;
+    padding-bottom: 40px;
 }
 
 .single-card {
@@ -69,8 +71,8 @@
     width: 500px;
     transition: all 0.4s cubic-bezier(0.175, 0.889, 0, 1);
     box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.1);
-    margin-top: 40px;
-    margin-bottom: 40px;
+    margin-top: 15px;
+    margin-bottom: 15px;
     background-color: white;
 }
 
@@ -130,17 +132,13 @@
     background-color: white;
     color: #f1356d;
 }
-/* 
-@media (max-width: 720px) {
+
+@media (max-width: 620px) {
     .single-card {
-        float: none;
-        width: 87%;
+        width: 83%;
     }
 
-    .all-cards {
-        margin-right: 3%;
-        margin-left: 3%;
-        margin-top: 7%;
-        margin-bottom: 7%;
+    .navlinks a {
+        display: none !important;
     }
-} */
+}
