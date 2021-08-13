@@ -1,6 +1,6 @@
 import React from 'react'
-import { LocationOn, Schedule } from '@material-ui/icons';
-import { Link } from 'react-router-dom';
+import { LocationOn, Schedule } from '@material-ui/icons'
+import { Link } from 'react-router-dom'
 
 import murray from './assets/img/murray.jpg'
 import maria from './assets/img/maria.jpg'
@@ -9,6 +9,15 @@ import rafa from './assets/img/rafa.jpeg'
 
 const Card = ({ match, index }) => {
   const imgArray = [murray, maria, monflis, rafa];
+
+  let passToBookScreen = {
+    'p1': match.player1,
+    'p2': match.player2,
+    'location': match.location,
+    'time': match.time,
+    'cap': match.cap,
+    'sold': match.soldOut
+  };
 
   return(
     <div className = 'single-card'>
@@ -24,11 +33,11 @@ const Card = ({ match, index }) => {
         </div>
         <div className = "location-time">
           <div>
-              <LocationOn
-                fontSize = "small"
-                style = { {color: 'gray'} }
-              />
-          <span> { match.location } </span> <br /> 
+            <LocationOn
+              fontSize = "small"
+              style = { {color: 'gray'} }
+            />
+            <span> { match.location } </span> <br /> 
           </div>
           <div>
             <Schedule 
@@ -41,13 +50,13 @@ const Card = ({ match, index }) => {
       </div>
       <div className = "book">
         {
-          (parseInt(match.soldOut) < parseInt(match.cap)) &&
-          <Link to = "/book">
+          ( parseInt(match.soldOut) < parseInt(match.cap) ) &&
+          <Link to = {`/book/${ JSON.stringify(passToBookScreen) }`}>
             <button> Book Now </button>
           </Link>
         }
         {
-          (parseInt(match.soldOut) === parseInt(match.cap)) &&
+          ( parseInt(match.soldOut) === parseInt(match.cap) ) &&
             <button> Sold Out </button>
         }
       </div>

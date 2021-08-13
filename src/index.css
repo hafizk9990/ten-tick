@@ -38,7 +38,7 @@
     text-underline-offset: 18px;
 }
 
-.not-found {
+.center-align {
     right: 50%;
     bottom: 50%;
     transform: translate(50%, 50%);
@@ -119,7 +119,7 @@
     text-align: center;
 }
 
-.book button {
+button {
     background-color: #f1356d;
     border: none;
     color: white;
@@ -128,12 +128,61 @@
     font-weight: bold;
 }
 
-.book button:hover {
+button:hover {
     background-color: white;
     color: #f1356d;
 }
 
-@media (max-width: 620px) {
+.book-page {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    padding-top: 13%;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+.book-heading {
+    font-size: 40px;
+    color: #f1356d;
+    padding-bottom: 5px;
+}
+
+.book-match-info {
+    font-size: 20px;
+    color: gray;
+    padding-bottom: 30px;
+    font-weight: bold;
+}
+
+.book-form {
+    padding-bottom: 30px;
+}
+
+.book-form input {
+    width: 150px;
+    border: 1px solid #f1356d;
+    border-radius: 6px;
+    text-align: center;
+}
+
+.book-form input:focus {
+    border-color: #f1356d;
+    outline: none;
+}
+
+.book-form-label {
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.book-remaining {
+    color: gray;
+    font-size: 15px;
+}
+
+@media (max-width: 620px) {    
     .single-card {
         width: 83%;
     }
