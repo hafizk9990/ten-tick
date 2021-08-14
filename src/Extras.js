@@ -1,4 +1,4 @@
-import { Done } from '@material-ui/icons'
+import ExtrasCard from './ExtrasCard'
 
 import { useState } from 'react'
 import { useParams, Link } from "react-router-dom"
@@ -10,26 +10,25 @@ const Extras = () => {
   let totalTicks = dataObject.ticks;
 
   let extrasArray = [
-    {key: 'Popcorn -- 700 RS', value: false},
-    {key: 'Ice Cream -- 350 RS', value: false}, 
-    {key: 'Energy Drink -- 150 RS', value: false}, 
-    {key: 'Carbonated Drink -- 100 RS', value: false}, 
-    {key: 'Alchoholic Drink -- 5000 RS', value: false}, 
-    {key: 'Chewing Gums -- 50RS', value: false}, 
-    {key: 'Juice & Chips -- 250 RS ', value: false} 
+    {key: 'Popcorn', price: '750 RS', value: false},
+    {key: 'Ice Cream', price: '350 RS', value: false}, 
+    {key: 'Energy Drink', price: '150 RS', value: false}, 
+    {key: 'Carbonated Drink', price: '100 RS', value: false}, 
+    {key: 'Alchoholic Drink', price: '5000 RS', value: false}, 
+    {key: 'Chewing Gums', price: '50 RS', value: false}, 
+    {key: 'Juice & Chips ', price: '250 RS', value: false} 
   ];
+
   const [extras, setExtras] = useState( extrasArray );
   let displayArray = [];
 
   const HandleClick = (index) => {
-    console.log(index);
-
     setExtras( (previousState) => {
-      let selectedItem = { key: previousState[index].key, value: !previousState[index].value };
+      let selectedItem = { key: previousState[index].key, price: previousState[index].price, value: !previousState[index].value };
       var newState = [ 
         ...previousState.slice(0, index),
         selectedItem, 
-        ...previousState.slice(index + 1, extrasArray.length - 1)
+        ...previousState.slice(index + 1, extrasArray.length)
       ]
       console.log(newState);
       return newState;
@@ -42,29 +41,22 @@ const Extras = () => {
         extras.map( (data, index) => {
           if (data.value) {
             return(
-              <div key = { index } className = 'item'>
-                <div className = "item-name">
-                  { data.key }
-                </div>
-                <div>
-                  <button className = "item-added extras-buttons" onClick = { () => HandleClick(index) }> Added </button> &nbsp; 
-                  <Done style = {{ 'color': 'green '}}/>
-                </div>
-                <hr />
-              </div>
+              <ExtrasCard 
+                data = { data }
+                index = { index }
+                HandleClick = { HandleClick }
+                render = 'removeData'
+              />
             )
           }
           else {
             return(
-              <div key = { index } className = 'item'>
-                <div className = "item-name">
-                  { data.key }
-                </div>
-                <div>
-                  <button className = 'extras-buttons' onClick = { () => HandleClick(index) }> Add </button>
-                </div>
-                <hr className = "hr"/>
-              </div>
+              <ExtrasCard 
+                data = { data }
+                index = { index }
+                HandleClick = { HandleClick }
+                render = 'addData'
+              />
             )
           }
         })
@@ -77,7 +69,7 @@ const Extras = () => {
       <div className = 'extras-heading'>
         Spice Up Your Experience!
         <p className = 'extras-description'>
-          Grap some quick snacks to make your experience even more valuable and memorable!
+          Grab some quick snacks to make your experience even more valuable and memorable!
         </p>
       </div>
       <div className = "display-area">

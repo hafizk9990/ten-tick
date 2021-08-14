@@ -80,7 +80,23 @@
     background-color: white;
 }
 
+.single-card-extras {
+    border: 1px solid transparent;
+    border-radius: 15px;
+    padding: 18px;
+    width: 300px;
+    transition: all 0.4s cubic-bezier(0.175, 0.889, 0, 1);
+    box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.1);
+    margin-top: 15px;
+    margin-bottom: 15px;
+    background-color: white;
+}
+
 .single-card:hover {
+    transform: scale(1.15, 1.15);
+}
+
+.single-card-extras:hover {
     transform: scale(1.15, 1.15);
 }
 
@@ -223,8 +239,12 @@ button:hover {
 }
 
 .display-area {
-    padding-left: 33%;
-    padding-right: 33%;
+    display: inline-block;
+    text-align: center;
+    padding-right: 50px;
+    padding-left: 50px;
+    padding-top: 30px;
+    padding-bottom: 30ps;
 }
 
 .item {
@@ -233,14 +253,23 @@ button:hover {
 }
 
 .item-name {
-    font-weight: bold;
+    font-weight: bolder;
+    text-align: center;
+    font-size: 18px;
+}
+
+.item-price {
+    font-weight: light;
+    color: gray;
     padding: 10px;
     text-align: center;
+    font-size: 14px;
 }
 
 .item-added {
-    /* background-color: green; */
     color: green;
+    background-color: transparent;
+    margin-left: -5px;
 }
 
 .item-added:hover {
@@ -256,5 +285,11 @@ button:hover {
 
     .navlinks a {
         display: none !important;
+    }
+
+    .display-area {
+        display: inline-block;
+        text-align: center;
+        padding: 20px;
     }
 }
