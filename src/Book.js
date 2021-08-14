@@ -21,17 +21,18 @@ const Book = () => {
         <p className = "book-remaining"> Remaining: { matchInfo.cap - matchInfo.sold }</p>
         <form className = "book-form">
           <input
-            type = "text" 
+            type = "text"
             value = { totalTicks }
             onChange = { (event) => setTotalTicks(event.target.value) }
           />
         </form>
         {
-          ( parseInt(totalTicks) > 0 ) &&
+          ( parseInt(totalTicks) > parseInt(0) ) &&
           ( parseInt(totalTicks) <= `${ matchInfo.cap - matchInfo.sold }` ) &&
           <Link to = {`/extras/${ JSON.stringify( {'matchInfo': matchInfo, 'ticks': totalTicks } ) }`}>
             <button className = "book-button"> Next </button>
           </Link>
+          
         }
       </div>
     </React.Fragment>

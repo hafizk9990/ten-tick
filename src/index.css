@@ -146,6 +146,7 @@ button {
     padding: 8px;
     border-radius: 5px;
     font-weight: bold;
+    min-width: 100px;
 }
 
 button:hover {
@@ -286,15 +287,39 @@ button:hover {
     background-color: white;
 }
 
+.billing-table{
+    padding-top: 5%;
+    padding-right: 15%;
+    padding-left: 15%;
+    text-align: center;
+}
+
+.payable {
+    font-size: 35px;
+    color: #f1356d;
+    padding-bottom: 20px;
+}
+
+.show-total {
+    font-size: 20px;
+    padding: 10px;
+}
+
 @media (max-width: 620px) {    
     .single-card {
-        width: 83%;
+        width: 100%;
     }
 
     .navlinks a {
         display: none !important;
     }
 
+    .display-area-match {
+        display: inline-block;
+        text-align: center;
+        padding: 20px;
+    }
+    
     .display-area {
         display: inline-block;
         text-align: center;

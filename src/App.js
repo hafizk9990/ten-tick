@@ -5,6 +5,7 @@ import NavBar from './NavBar'
 import NotFound from "./404"
 import Book from "./Book"
 import Billing from './Billing.js'
+import PDF from './PDF'
 import { BrowserRouter as ReactRouter, Switch, Route } from "react-router-dom"
 import Extras from "./Extras"
 
@@ -33,6 +34,10 @@ const App = () => {
           
           <Route exact path = '/billing/:data'>
             <Billing />
+          </Route>
+          
+          <Route exact path = '/generatePDF/:data'>
+            <PDF />
           </Route>
           
           <Route path = "/*">

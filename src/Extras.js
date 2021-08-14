@@ -20,6 +20,7 @@ const Extras = () => {
   ];
 
   const [extras, setExtras] = useState( extrasArray );
+  const [payable, setPayable] = useState(0);
   let displayArray = [];
 
   const HandleClick = (index) => {
@@ -30,7 +31,14 @@ const Extras = () => {
         selectedItem, 
         ...previousState.slice(index + 1, extrasArray.length)
       ]
-      console.log(newState);
+      
+      if (previousState[index].value) {
+        setPayable( (previousValue) => parseInt(previousValue) - (totalTicks * parseInt(previousState[index].price)));
+      }
+      else {
+        setPayable( (previousValue) => parseInt(previousValue) + (totalTicks * parseInt(previousState[index].price)));
+      }
+
       return newState;
     });
   }
@@ -81,7 +89,8 @@ const Extras = () => {
       <p className = 'extras-note'>
         <span> Note: </span> Price shown above is price per piece, not after replication
       </p>
-      <Link to = {`/billing/${ JSON.stringify( {'matchInfo': matchInfo, 'ticks': totalTicks, 'extras': extras } ) }`}>
+      <div className = 'show-total'> Total Payble: { payable + parseInt(totalTicks * 25000) } RS </div>
+      <Link to = {`/billing/${ JSON.stringify( {'matchInfo': matchInfo, 'ticks': totalTicks, 'extras': extras, 'payable': payable } ) }`}>
         <button className = "book-button"> Next </button>
       </Link>
     </div>

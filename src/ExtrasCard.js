@@ -9,7 +9,7 @@ const ExtrasCard = ( {data, index, HandleClick, render} ) => {
           <div className = 'item-price'> { data.price } </div>
           <div>
             <Done style = {{ 'color': 'green '}}/>
-            <button className = "item-added extras-buttons" onClick = { () => HandleClick(index) }> Item Added </button>
+            <button className = "item-added extras-buttons" onClick = { () => HandleClick(index) }> Added </button>
           </div>
         </div>
       </div>
