@@ -1,7 +1,7 @@
 import React from "react";
 import useFetch from "./useFetch"
 import loadingGif from './assets/img/loading.gif'
-import Card from './Card'
+import Card from './MatchCard'
 
 const Home = () => {
   const [appData, isDataLoding] = useFetch();
@@ -21,7 +21,7 @@ const Home = () => {
         {
           appData.map( (eachMatch, index) => {
             return(
-              <div className = "all-cards">
+              <div className = "display-area-match">
                 <Card 
                   key = { index }
                   match = { eachMatch }

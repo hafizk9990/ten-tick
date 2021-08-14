@@ -84,7 +84,7 @@
     border: 1px solid transparent;
     border-radius: 15px;
     padding: 18px;
-    width: 300px;
+    width: 200px;
     transition: all 0.4s cubic-bezier(0.175, 0.889, 0, 1);
     box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.1);
     margin-top: 15px;
@@ -244,7 +244,15 @@ button:hover {
     padding-right: 50px;
     padding-left: 50px;
     padding-top: 30px;
-    padding-bottom: 30ps;
+    padding-bottom: 40px;
+}
+
+.display-area-match {
+    display: inline-block;
+    padding-right: 60px;
+    padding-left: 60px;
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
 
 .item {
