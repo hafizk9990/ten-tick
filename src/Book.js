@@ -5,6 +5,7 @@ import { useParams } from "react-router-dom"
 const Book = () => {
   let { data } = useParams();
   let matchInfo = JSON.parse(data);
+
   const [totalTicks, setTotalTicks] = useState(0);
 
   return(

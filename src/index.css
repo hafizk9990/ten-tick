@@ -4,6 +4,10 @@
     font-family: "Quicksand";
 }
 
+.loading-gif {
+    width: 350px;
+}
+
 .navbar {
     background-color: #f0f0f0;
     height: 110px;
@@ -180,6 +184,69 @@ button:hover {
 .book-remaining {
     color: gray;
     font-size: 15px;
+}
+
+.hr {
+    color: #f1356d;
+    font-weight: bold;
+}
+
+.extras {
+    margin-top: 2%;
+    padding: 30px;
+    text-align: center;
+}
+
+.extras-heading {
+    font-size: 30px;
+    color: #f1356d;
+}
+
+.extras-description {
+    color: gray;
+    font-size: 17px;
+}
+
+.extras-note {
+    color: gray;
+    font-size: 14px;
+}
+
+.extras-note span {
+    color: #f1356d;
+    font-weight: bold;
+}
+
+.extras-buttons {
+    background-color: #f0f0f0;
+    color: #f1356d;
+}
+
+.display-area {
+    padding-left: 33%;
+    padding-right: 33%;
+}
+
+.item {
+    padding: 10px;
+    text-align: center;
+}
+
+.item-name {
+    font-weight: bold;
+    padding: 10px;
+    text-align: center;
+}
+
+.item-added {
+    /* background-color: green; */
+    color: green;
+}
+
+.item-added:hover {
+    color: green;
+    outline: none;
+    background-color: white;
 }
 
 @media (max-width: 620px) {    

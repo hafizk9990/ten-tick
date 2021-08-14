@@ -4,6 +4,7 @@ import About from './About'
 import NavBar from './NavBar'
 import NotFound from "./404"
 import Book from "./Book"
+import Billing from './Billing.js'
 import { BrowserRouter as ReactRouter, Switch, Route } from "react-router-dom"
 import Extras from "./Extras"
 
@@ -30,7 +31,11 @@ const App = () => {
             <Extras />
           </Route>
           
-          <Route exact path = "/*">
+          <Route exact path = '/billing/:data'>
+            <Billing />
+          </Route>
+          
+          <Route path = "/*">
             <NotFound />
           </Route>
         </Switch>

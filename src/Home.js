@@ -11,7 +11,7 @@ const Home = () => {
     {
       isDataLoding &&
       <div className = "d-flex align-items-center justify-content-center">
-        <img src = { loadingGif } alt = "loading" />
+        <img className = "loading-gif center-align" src = { loadingGif } alt = "loading" />
       </div> 
     }
 
