@@ -381,10 +381,26 @@ button:hover {
     }
 
     .single-card:hover {
-        transform: scale(1, 1);
+        transform: scale(1.0, 1.0);
     }
     
     .single-card-extras:hover {
-        transform: scale(1, 1);
+        transform: scale(1.0, 1.0);
+    }
+
+    .how-many-ticks {
+        padding: 20px;
+        font-size: 25px;
+        color: gray;
+        border: 7px solid #f1356d;
+        margin-top: 40px;
+        width: 100%;
+        text-align: center;
+        margin-left: 175px;
+    }
+
+    .tick-content {
+        padding: 5px;
+        font-size: 10px;
     }
 }

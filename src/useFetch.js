@@ -21,7 +21,7 @@ const useFetch = () => {
         setIsDataLoading(false);
         setappData( data.val() );
       });
-    }, 0);
+    }, 1000);
   }, []);
 
   return [appData, isDataLoding];
