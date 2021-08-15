@@ -14,9 +14,6 @@ const NavBar = () => {
         <Link to = "/">
           <span className = "home-button"> Home </span>
         </Link>
-        <Link to = "/about">
-          <span className = "home-button"> About </span>
-        </Link>
       </div>
 
     </div>

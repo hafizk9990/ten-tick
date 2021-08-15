@@ -16,12 +16,8 @@ const App = () => {
       <ReactRouter>
         <NavBar />
         <Switch>
-          <Route exact path = "/">
+          <Route exact path = "/ten-tick">
             <Home />
-          </Route>
-
-          <Route exact path = '/about'>
-            <About />
           </Route>
           
           <Route exact path = "/book/:data">
