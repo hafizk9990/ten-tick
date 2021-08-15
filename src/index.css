@@ -15,6 +15,14 @@
     padding-right: 15%;
 }
 
+.logo-link p {
+    color: black;
+}
+
+.logo-link:hover {
+    text-decoration: none;
+}
+
 .name-tagline p {
     font-weight: bold;
 }
@@ -292,6 +300,7 @@ button:hover {
     padding-right: 15%;
     padding-left: 15%;
     text-align: center;
+    /* width: 800px; */
 }
 
 .payable {
@@ -305,6 +314,52 @@ button:hover {
     padding: 10px;
 }
 
+.tick-content {
+    padding: 50px;
+}
+
+.claim {
+    font-size: 35px;
+    color: #f1356d;
+}
+
+.pdf-img {
+    margin-left: -50px;
+    margin-bottom: 20px;
+}
+
+.how-many-ticks {
+    padding: 20px;
+    font-size: 25px;
+    color: gray;
+    border: 7px solid #f1356d;
+    margin-top: 40px;
+    width: 25%;
+    text-align: center;
+    margin-left: 175px;
+}
+
+.tick-extras-list {
+    margin-top: 30px;
+    color: #f1356d;
+    margin-left: -40px;
+}
+
+.no-bullets {
+    list-style-type: none;
+}
+
+.generate-tick {
+    text-align: center;
+    padding-top: 50px;
+}
+
+.generate-tick p {
+    padding-top: 20px;
+    color: gray;
+    font-size: 15px;
+}
+
 @media (max-width: 620px) {    
     .single-card {
         width: 100%;
@@ -316,7 +371,6 @@ button:hover {
 
     .display-area-match {
         display: inline-block;
-        text-align: center;
         padding: 20px;
     }
     
@@ -324,5 +378,13 @@ button:hover {
         display: inline-block;
         text-align: center;
         padding: 20px;
+    }
+
+    .single-card:hover {
+        transform: scale(1, 1);
+    }
+    
+    .single-card-extras:hover {
+        transform: scale(1, 1);
     }
 }

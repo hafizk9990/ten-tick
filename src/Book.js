@@ -6,7 +6,7 @@ const Book = () => {
   let { data } = useParams();
   let matchInfo = JSON.parse(data);
 
-  const [totalTicks, setTotalTicks] = useState(0);
+  const [totalTicks, setTotalTicks] = useState(1);
 
   return(
     <React.Fragment>

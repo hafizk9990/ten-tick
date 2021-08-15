@@ -36,7 +36,7 @@ const App = () => {
             <Billing />
           </Route>
           
-          <Route exact path = '/generatePDF/:data'>
+          <Route exact path = '/generateTick/:data'>
             <PDF />
           </Route>
           

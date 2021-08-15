@@ -1,5 +1,5 @@
 import React from 'react'
-import { withStyles, makeStyles } from '@material-ui/core/styles'
+import { withStyles } from '@material-ui/core/styles'
 import Table from '@material-ui/core/Table'
 import TableBody from '@material-ui/core/TableBody'
 import TableCell from '@material-ui/core/TableCell'
@@ -7,7 +7,6 @@ import TableContainer from '@material-ui/core/TableContainer'
 import TableHead from '@material-ui/core/TableHead'
 import TableRow from '@material-ui/core/TableRow'
 import Paper from '@material-ui/core/Paper'
-
 import { useParams, Link } from "react-router-dom"
 
 const StyledTableCell = withStyles((theme) => ({
@@ -28,16 +27,6 @@ const StyledTableRow = withStyles((theme) => ({
   },
 }))(TableRow);
 
-function createData(item, quantity, price) {
-  return { item, quantity, price };
-}
-
-const useStyles = makeStyles({
-  table: {
-    minWidth: 700,
-  },
-});
-
 const Billing = () => {
   let { data } = useParams();
   let dataObject = JSON.parse(data);
@@ -46,13 +35,11 @@ const Billing = () => {
   let extras = dataObject.extras;
   let payable = dataObject.payable + totalTicks * 25000;
 
-  const classes = useStyles();
-
   return(
     <div className = "billing-table">
       <div className = "payable"> Your Total Payable is { payable } Rs </div>
       <TableContainer component={Paper}>
-        <Table className={classes.table} aria-label="customized table">
+        <Table aria-label="customized table">
           <TableHead>
             <TableRow>
               <StyledTableCell> Item </StyledTableCell>
@@ -75,8 +62,9 @@ const Billing = () => {
         </Table>
       </TableContainer>
       <br />
-      <Link to = {`/generatePDF/${ JSON.stringify( {'matchInfo': matchInfo, 'ticks': totalTicks, 'extras': extras, 'payable': payable } ) }`}>
+      <Link to = {`/generateTick/${ JSON.stringify( {'matchInfo': matchInfo, 'ticks': totalTicks, 'extras': extras, 'payable': payable } ) }`}>
         <button className = "book-button"> Pay & Proceed </button>
+        <br /> <br /> <br />
       </Link>
     </div>
   );
