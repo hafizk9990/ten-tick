@@ -34,7 +34,7 @@ const Billing = () => {
 
   return(
     <React.Fragment>
-      <div class = "tick-content">
+      <div className = "tick-content">
         <div>
           <img className = 'pdf-img' src = { logo } alt = "Logo"/>
           <p className = 'vs' style = { {color: 'gray'} }> { matchInfo.p1 } VS { matchInfo.p2 } </p>
