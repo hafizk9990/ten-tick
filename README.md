@@ -2,7 +2,7 @@
 Ten-Tick is a Single-Page Application (SPA) that allows you to purchase tickets (ticks) for tennis (ten) matches happening all over the world at any given day. You don't have to go through the hassel of being at the stadium at the right time or standing in long, tiring queues to get the tickets. You have the comfort of sitting in your home and booking the ticket for the matches you would love to go to
 
 ## Project Timeline
-Uzair implemented this project in his 2021 Summer break as a rising final-year Computer Science & Software Engineering Student at LUMS. It took him over two weeks learning modern ReactJS concepts and then over a week implementing this app
+I implemented this project in his 2021 Summer break as a rising final-year Computer Science & Software Engineering Student at LUMS. It took him over two weeks learning modern ReactJS concepts and then over a week implementing this app
 
 ## App Complexity
 The app, quite holisticly, tries to cover all the main elements of an advanced basic React app. It covers the following:
